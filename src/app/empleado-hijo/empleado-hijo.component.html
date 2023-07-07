@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div >
+          <span>{{ index+ 1 }}: {{ employeeList?.firstName }} {{ employeeList?.lastName }} {{ employeeList?.position }} - ${{ employeeList?.salary }}</span>
+          <a [routerLink]="['/update-comp', index]" [queryParams]="{action:'1'}">
+              Actualiza
+          </a>
+          <a [routerLink]="['/update-comp', index]" [queryParams]="{action:'2'}">
+            Elimina
+        </a>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-employee-characteristics (employeeCharacteristics)="addCharacteristic($event)" ></app-employee-characteristics>
+  
+  <ul>
+    <li *ngFor="let item of characteristics">{{item}}</li>
+  </ul>

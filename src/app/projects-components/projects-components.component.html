@@ -1,0 +1,56 @@
+<p>projects-components works!</p>
+
+<div class="container">
+  
+    <form action="" class="form-group row">
+      <div class="form-group col-md-3">
+        <label for="firstName">Nombre</label>
+        <input
+          type="text"
+          placeholder="Juan..."
+          id="firstName"
+          [(ngModel)]="formFirstName"
+          name="formFirstName"
+        />
+      </div>
+      <div class="form-group col-md-3">
+        <label for="lastName">Apellido</label>
+        <input
+          type="text"
+          placeholder="Diaz..."
+          id="lastName"
+          [(ngModel)]="formLasttName"
+          name="formLasttName"
+        />
+      </div>
+      <div class="form-group col-md-3">
+        <label for="position">Puesto</label>
+        <input
+          type="text"
+          placeholder="Director..."
+          id="position"
+          [(ngModel)]="formPosition"
+          name="position"
+        />
+      </div>
+      <div class="form-group col-md-3">
+        <label for="salary">Salario</label>
+        <input
+          type="text"
+          placeholder="$3000..."
+          id="salary"
+          [(ngModel)]="formSalary"
+          name="salary"
+        />
+      </div>
+      <input type="button" value="Crear" (click)="handleNewEmployee()" />
+    </form>
+  </div>
+  
+  
+
+
+<div style="align-items: center;">
+    <button class="btn btn-primary" (click)="toHome()">Volver al Home</button>
+
+</div>
